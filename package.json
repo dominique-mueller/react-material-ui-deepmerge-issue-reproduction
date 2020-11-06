@@ -1,0 +1,47 @@
+{
+  "name": "react-material-ui-deepmerge-issue-reproduction",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "10.1.x",
+    "@emotion/styled": "10.0.x",
+    "@material-ui/core": "5.0.0-alpha.15",
+    "react": "17.0.x",
+    "react-dom": "17.0.x"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.11.x",
+    "@testing-library/react": "11.1.x",
+    "@testing-library/user-event": "12.1.x",
+    "@types/jest": "26.0.x",
+    "@types/node": "12.19.x",
+    "@types/react": "16.9.x",
+    "@types/react-dom": "16.9.x",
+    "react-scripts": "4.0.x",
+    "typescript": "4.0.x"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
