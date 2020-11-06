@@ -15,7 +15,7 @@ the global theme using `defaultProps`. Now, if I choose to use an arrow (`arrow`
 modifiers (e.g. `computeStyle` or `offset`), the arrow does not get placed properly.
 
 An analysis shows: If a custom `PopperProps` value is defined, it gets deepmerged with the `PopperProps` value inside the `<Tooltip />`
-component, yet that deepmerge process does not combine the modifiers but replace all existing modifiers with the custom ones, thus removing
+component, yet that deepmerge process does not combine the modifiers but replaces all existing modifiers with the custom ones, thus removing
 the modifier that is responsible for properly positioning the arrow.
 
 **Works (no modifiers)**
