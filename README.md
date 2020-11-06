@@ -17,6 +17,52 @@ modifiers (e.g. `computeStyle` or `offset`), the arrow does not get placed prope
 An analysis shows: If a custom `PopperProps` value is defined, it gets deepmerged with the `PopperProps` value inside the `<Tooltip />`
 component, yet that deepmerge process does not indeed combine the modifiers but replace all existing `PopperProps` with the custom ones.
 
+**Works (no modifiers)**
+
+```jsx
+<Tooltip
+  title="This is a tooltip"
+  arrow
+  PopperProps={{
+    popperOptions: {
+      strategy: 'fixed',
+    },
+  }}
+>
+  <button type="button">Hover me</button>
+</Tooltip>
+```
+
+**Breaks (with modifiers)**
+
+```jsx
+<Tooltip
+  title="This is a tooltip"
+  arrow
+  PopperProps={{
+    popperOptions: {
+      strategy: 'fixed',
+      modifiers: [
+        {
+          name: 'computeStyle',
+          options: {
+            gpuAcceleration: false,
+          },
+        },
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 3],
+          },
+        },
+      ],
+    },
+  }}
+>
+  <button type="button">Hover me</button>
+</Tooltip>
+```
+
 **Preview:**
 
 ![Preview](/docs/preview.gif?raw=true)
