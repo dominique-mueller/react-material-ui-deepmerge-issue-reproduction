@@ -10,7 +10,7 @@
 
 ## Details
 
-I customize the `<Tooltip />` component, either using the `PopperProsp` prop directly or by customizing the default `PopperPros` value in
+I customize the `<Tooltip />` component, either using the `PopperProps` prop directly or by customizing the default `PopperPros` value in
 the global theme using `defaultProps`. Now, if I choose to use an arrow (`arrow` props set to `true`) and decide to define custom popper.js
 modifiers (e.g. `computeStyle` or `offset`), the arrow does not get placed properly.
 
