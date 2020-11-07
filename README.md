@@ -45,7 +45,7 @@ the modifier that is responsible for properly positioning the arrow.
       strategy: 'fixed',
       modifiers: [
         {
-          name: 'computeStyle',
+          name: 'computeStyles',
           options: {
             gpuAcceleration: false,
           },
